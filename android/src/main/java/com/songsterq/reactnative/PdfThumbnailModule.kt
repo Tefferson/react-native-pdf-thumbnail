@@ -89,7 +89,7 @@ class PdfThumbnailModule(reactContext: ReactApplicationContext) : ReactContextBa
     val currentPage = pdfRenderer.openPage(page)
     val width = currentPage.width
     val height = currentPage.height
-    val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+    val bitmap = Bitmap.createBitmap(width * 2, height * 2, Bitmap.Config.ARGB_8888)
     currentPage.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
     currentPage.close()
 
