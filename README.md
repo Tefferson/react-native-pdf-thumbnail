@@ -1,3 +1,5 @@
+# FORK from https://github.com/songsterq/react-native-pdf-thumbnail
+
 # react-native-pdf-thumbnail
 
 A react native module for generating thumbnail for PDF files.
