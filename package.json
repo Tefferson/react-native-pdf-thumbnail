@@ -13,7 +13,7 @@
     "android",
     "ios",
     "cpp",
-    "react-native-pdf-thumbnail.podspec",
+    "teff-react-native-pdf-thumbnail.podspec",
     "!lib/typescript/example",
     "!**/__tests__",
     "!**/__fixtures__",
@@ -34,13 +34,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/songsterq/react-native-pdf-thumbnail",
+  "repository": "https://github.com/Tefferson/react-native-pdf-thumbnail",
   "author": "Song Qian <songsterq@gmail.com> (https://github.com/songsterq)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/songsterq/react-native-pdf-thumbnail/issues"
+    "url": "https://github.com/Tefferson/react-native-pdf-thumbnail/issues"
   },
-  "homepage": "https://github.com/songsterq/react-native-pdf-thumbnail#readme",
+  "homepage": "https://github.com/Tefferson/react-native-pdf-thumbnail#readme",
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
     "@react-native-community/bob": "^0.16.2",

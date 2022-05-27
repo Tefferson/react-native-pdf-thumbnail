@@ -1,6 +1,6 @@
 # FORK from https://github.com/songsterq/react-native-pdf-thumbnail
 
-# react-native-pdf-thumbnail
+# teff-react-native-pdf-thumbnail
 
 A react native module for generating thumbnail for PDF files.
 
@@ -13,13 +13,13 @@ No other JavaScript or native dependencies needed.
 ## Installation
 
 ```sh
-npm install react-native-pdf-thumbnail
+npm install teff-react-native-pdf-thumbnail
 ```
 
 ## Usage
 
 ```js
-import PdfThumbnail from "react-native-pdf-thumbnail";
+import PdfThumbnail from "teff-react-native-pdf-thumbnail";
 
 // For iOS, the filePath can be a file URL.
 // For Android, the filePath can be either a content URI, a file URI or an absolute path.
