@@ -7,12 +7,12 @@ class PdfThumbnail: NSObject {
     static func requiresMainQueueSetup() -> Bool {
         return false
     }
-    
+
     func getCachesDirectory() -> URL {
         let paths = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
         return paths[0]
     }
-    
+
     func getOutputFilename(filePath: String, page: Int) -> String {
         let components = filePath.components(separatedBy: "/")
         var prefix: String
@@ -27,7 +27,7 @@ class PdfThumbnail: NSObject {
 
     func generatePage(pdfPage: PDFPage, filePath: String, page: Int) -> Dictionary<String, Any>? {
         let pageRect = pdfPage.bounds(for: .mediaBox)
-        let image = pdfPage.thumbnail(of: CGSize(width: pageRect.width, height: pageRect.height), for: .mediaBox)
+        let image = pdfPage.thumbnail(of: CGSize(width: pageRect.width * 3, height: pageRect.height * 3), for: .mediaBox)
         let outputFile = getCachesDirectory().appendingPathComponent(getOutputFilename(filePath: filePath, page: page))
         guard let data = image.jpegData(compressionQuality: 80) else {
             return nil
@@ -43,7 +43,7 @@ class PdfThumbnail: NSObject {
             return nil
         }
     }
-    
+
     @available(iOS 11.0, *)
     @objc(generate:withPage:withResolver:withRejecter:)
     func generate(filePath: String, page: Int, resolve:RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) -> Void {
